@@ -1,0 +1,18 @@
+#!/usr/bin/env php
+<?php
+include "anchor.php";
+$x = 0;
+echo "\033[36m anchor script: v 0.0.1\n";
+echo "\033[36m Copyright (C) Adam W. Telford\n";
+echo "\033[36m Licence: GNU_3.0\n\n";
+while(true){
+	//echo "\033[36m anchor:" . $x . "> \033[0m ";
+	//$input = trim(fgets(STDIN));
+	echo "\033[37m";
+	$input = readline('line[' . $x . ']> ');
+	$input = trim($input);
+	run($input, $x);
+	$x = $x + 1;
+	//echo  "> " .  $input . "\n";
+}
+?>
